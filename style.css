@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+/* COMMON */
+header {
+    background-color: #FF9045;
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+header img#img_en_tete {
+   height: 100%;
+}
+
+.width-33 {
+    width: 33%; 
+}
+
+.width-full {
+    width: 100%; 
+}
+
+.height-full {
+    height: 100%;
+}
+
+.border {
+    border: 1px solid blue;
+}
+
+#center-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#description {
+    display: block;
+    width: 66%;
+}
+
+#img-product {
+    height: 300px;
+}
+
+#choice {
+    width: 33%;
+}
+
+
+#content {
+    /* Aligne sur la mm ligne */
+    display: flex;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    header {
+    
+    }
+  }
+
+/* desktop */
+@media (min-width: 768px) {
+header {
+}
+
+
+h1{
+    font-family: roca system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+
+p { 
+        background: linear-gradient(to top, rgba(0, 0, 0 0.5), rgb(253, 253, 253)); 
+        /* border: 2px solid black; */
+        margin-right: 20px; /* Espacement horizontal entre les <divs> */
+        display: inline-block; /* Pour qu'elles soient alignés côte à côte */
+        padding: 10px; /* Espace entre le texte et la bordure */
+        display: inline-block; 
+    }
+}
