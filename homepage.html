@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pugmania.com</title>
+    <link rel='stylesheet' href='homepage.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+	  <script src="index.js" async></script>
+    <script src="homepage.js" async></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const closeBtn = document.querySelector('.close-button');
+          const hamburger = document.querySelector('#hamburger');
+  
+          closeBtn.addEventListener('click', function () {
+              hamburger.checked = false; // Décoche la case à cocher
+          });
+      });
+    </script>    
+  </head>
+
+  
+  <body>
+    <header>
+      <div class="logo">
+        <a href="homepage.html">
+          <img id="logo" class="width-full" src="assets/img/Logo final vert.png" alt="Img-header">
+        </a>
+      </div>
+      <div class="happy-pug">
+        <img id="img-happy-pug" class="width-full" src="assets/img/happy-pug.png" alt="Img-header">
+      </div>
+      <div class="img-menu">
+        <label id="hamburger-logo" for="hamburger"> <img id="img-menu" button id="openBtn" class="height-full" src="assets/img/menuf.svg" alt="Image de l'en-tete"></label>
+      </div>
+      <!-- image svg non pixelisable -->
+      
+    </header>
+
+  <!-- <class="@media (min-width: 740px)""> -->
+    <div class="menu">
+      <!-- Utilisation d'une checkbox -->
+      <input type="checkbox" id="hamburger">
+      <!-- Le reste du menu -->
+      
+    
+      <nav>
+        <button class="close-button"><h4>close Menu X</h4></button></a>
+        <a href="login/login.html">My account</a>
+        <a href="#">My basket</a>
+        <a href="#">Clothing</a>
+        <a href="#">Accessories</a>
+        <a href="#">Pug Fashion</a>
+        <a href="#">Quality nutrition</a>
+        <a href="#">Blog pug’s advice</a>
+        <a href="#">About US</a>
+        <a href="#">Contact us</a>
+        <a href="homepage.html">Home page</a>
+      </nav>
+    </div>
+
+    <div class="slide-container">
+      <div class="custom-slider fade">
+        <a href="index.html">
+          <img class="slide-img" src="Unique accessories.svg">
+        </a>
+      </div>
+      <div class="custom-slider fade">
+          <img class="slide-img" src="pugfashion.svg">
+      </div>
+      <div class="custom-slider fade">
+        <a href="index.html">
+          <img class="slide-img" src="Unique quality nutrition.svg">
+        </a>
+      </div>
+      <div class="custom-slider fade">
+        <img class="slide-img" src="Clothing with pug designs.svg">
+      </div>
+      <div class="custom-slider fade">
+        <img class="slide-img" src="the BLog of PUG’s advice.svg">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div class="slide-dot">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+<!-- <div id="center-content">
+  <div id="container-unique-accessories">
+    <h1>Unique accessories</h1>
+    <div id="img-homepage">
+      <div class="width-full">
+        <img id="img-product-yoda" src="assets/img/yoda.png" alt="img-product">
+        <img id="img-product-carpet" src="assets/img/carpet.png" alt="img-product">
+        <img id="img-product-key" src="assets/img/key.png" alt="img-product">     
+      </div>
+    </div>
+</div> -->
+
+    <h1>For pug lover only!</h1>
+    <p class="text-center">
+      Pugmania is more than just a shop for Pug lovers; it's a genuine revolution in the world of Pug-themed product retail. Founded by a team of passionate Pug enthusiasts, Pugmania aims to conquer the world with its love for these charming and playful dogs.
+      <br> Pugmania, our mission is to celebrate and share the love for Pugs with the world. We believe that every Pug is a little star and deserves to be treated as such.
+    </p>
+
+    <footer>
+      <!-- <img id="img-footer" src="assets/img/img footer.png" alt="Image du footer"> -->
+      <div id="link">
+        <a href="contactus.html">Contact Us</a><br>
+        <a href="shippinginfo.html">Shipping info</a><br>
+        <a href="measureyourpug.html">Measure your pug</a><br>
+        <a href="legalinformation.html">Legal information</a><br>
+        <div class="img-footer">
+          <a href="https://www.facebook.com"><img src="assets/img/facebook.svg.svg" alt="Img footer">
+          <a href="https://www.youtube.com"><img src="assets/img/youtube.svg.svg" alt="Img footer">
+          <a href="https://www.tiktok.com"><img src="assets/img/tiktok.svg.svg" alt="Img footer">
+        </div>
+      </div>
+
+    </footer>
+  </body>
+</html>

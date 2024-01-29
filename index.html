@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pugmania.com</title>
+    <title>Pugmania - Aspect pug croquettes'</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-	  <script src="index.js"></script>
+	  <script src="index.js" async></script>
+  
   </head>
-  <header>
-    <div class="width-33">
-      <img id="logo" class="height-full" src="assets/img/Logo final vert.png" alt="Image de l'en-tete">
-    </div>
-    <div class="width-33">
-      <img id="img_en_tete" class="height-full" src="assets/img/happy-pug.png" alt="Image de l'en-tete">
-    </div>
-    <div class="width-33">
-      <img id="img menu" class="height-full" src="assets/img/menu.svg" alt="Image de l'en-tete">
-    </div>
-    <!-- image svg non pixelisable -->
-  </header>
+  
+
   <body>
+    <header>
+      <div class="logo">
+        <a href="homepage.html">
+        <img id="logo" class="width-full" src="assets/img/Logo final vert.png" alt="Img-header">
+        </a>
+      </div>
+      <div class="happy-pug">
+        <img id="img-happy-pug" class="width-full" src="assets/img/happy-pug.png" alt="Img-header">
+      </div>
+      <div class="img-menu">
+        <label id="hamburger-logo" for="hamburger"> <img id="img-menu" button id="openBtn" class="height-full" src="assets/img/menuf.svg" alt="Img-header"></label>
+      </div>
+      
+    </header>
+
+    <div class="menu">
+      <!-- Utilisation d'une checkbox -->
+      <input type="checkbox" id="hamburger">
+      
+      <nav>
+        <button class="close-button"><h4>Close Menu X</h4></button></a>
+        <a href="login/login.html">My account</a>
+        <a href="#">My basket</a>
+        <a href="#">Clothing</a>
+        <a href="#">Accessories</a>
+        <a href="#">Pug Fashion</a>
+        <a href="#">Quality nutrition</a>
+        <a href="#">Blog pug’s advice</a>
+        <a href="#">About US</a>
+        <a href="#">Contact us</a>
+        <a href="homepage.html">Home page</a>
+
+      </nav>
+    </div>
 
     <div id="center-content">
-      <h1>Aspect pug “ croquettes “</h1>
+    
+      <h1>Aspect pug croquettes' </h1>
 
       <div id="content">
         <div id="description">
           <div class="width-full">
             <img id="img-product" src="assets/img/product-1.png" alt="Image du produit">
-            <img id="img-product" src="assets/img/product-1.png" alt="Image du produit">
+            <img id="img-product2" src="assets/img/Product-2.png" alt="Image du produit">
 
           </div>
 
@@ -42,24 +68,100 @@
           <p>
             lamb meat meal (37%), rice (28%), rice bran, poultry fat, dried beet root, yeast, digest, linseed (2%), glucosamine sulphate (0.02%), chicory roots (source of mannan-oligosaccharides (0.018%)), herbal blend (0.02% - fennel, basil, sage), fructo-oligosaccharides - FOS (0.012%), chondroitin sulphate (0.012%), Yucca schidigera extract (0.01%), marigold extract (0.01%).
           </p>
+
+          <div id="rewiews">
+            <h3>Reviews :</h3>
+            <p>A mi me gusta mucho los perros
+              <span>ElTeoDeMexico  - 25/08/2023</span>
+            </p>
+
+            <p>So cool, my dog loved it!  
+              <span>Romalama  - 01/08/2023</span>
+            </p>
+
+            <p>So so sweet !
+              <span>Karen09  -  11/07/2023</span>
+            </p>
+            <p>My dog love it !
+              <span>Tof31  -  21/06/23 </span>
+            </p>
+
+            <p>Great, my snoopy love it.
+              <span>StevenFirst  -  11/05/2023</span>
+            </p>
+
+            <p>That's it !
+              <span>Tolrom-Elmander31  -  01/02/2023</span>
+            </p>
+
+            <p>TOP, my litlle bestiole love it, I recommend it.
+              <span>ToruChan31  -  13/01/2023</span>
+            </p>
+          </div>
+
         </div>
         
-        <div id="choice">
-          <div>price</div>z
-          <div>add to BASKET</div>
-          <div>Size</div>
-          <div>Quantity</div>
+        <div id="choice">    
+          <div>
+            <div class="container">
+              <div class="green-circle"><p><span id="price">€</span></p>
+              </div>
+              
+              <p class="p-select-size">Select size</p>
+          </div>
+            <select id="select-size">
+              <option value="1.5">1.5 kg</option>
+              <option value="3">3 kg</option>
+            </select>      
+            <div class="button-container">
+              <p>Quantity <span id="quantite"></span></p>
+              <button id="less-quantite" class="quantity-button">-</button>
+              <button id="more-quantite" class="quantity-button">+</button>
+            </div>
+          <button class="add-to-basket">Add to basket</button>
+
 
         </div>
 
       </div>
         
     
-       <!--Alt+z pour voir l'integralité d'une ligne-->
+        <!--Alt+z pour voir l'integralité d'une ligne trop longue-->
 
     </div>
-    <footer>
-      <img id="img-footer" src="assets/img/img footer.png" alt=Image du footer">
-    </footer>
+    </div>
+    
   </body>
+
+  <footer>
+    <!-- <img id="img-footer" src="assets/img/img footer.png" alt="Image du footer"> -->
+    <div id="link">
+      <a href="contactus.html">Contact Us</a><br>
+      <a href="shippinginfo.html">Shipping info</a><br>
+      <a href="measureyourpug.html">Measure your pug</a><br>
+      <a href="legalinformation.html">Legal information</a><br>
+      <div class="img-footer">
+        <a href="https://www.facebook.com"><img src="assets/img/facebook.svg.svg" alt="Image du footeur">
+        <a href="https://www.youtube.com"><img src="assets/img/youtube.svg.svg" alt="Image du footeur">
+        <a href="https://www.tiktok.com"><img src="assets/img/tiktok.svg.svg" alt="Image du footeur">
+      </div>
+    </div>
+
+  </footer>
 </html>
+
+
+
+
+<div>
+  <div></div>
+  <div></div>
+  <div>
+    <div>
+      <div></div>
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>

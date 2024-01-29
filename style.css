@@ -1,35 +1,78 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* COMMON *//////////////////////////////////////////////////////////////////////////////////
-header {
-    background-color: #FF9045;
-    width: 100%;
-    height: 367px;
+*{
+    cursor: url('favicon.ico'), auto;
+}
+
+/* COMMUN ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#rewiews {
     display: flex;
-    
+    flex-direction: column;
+
+    p {
+        margin-top: 12px;
+        
+        span {
+            color: #FF9045;
+            white-space : normal; /* Colle au commentaire afin de ne conserver un maximum de lisibilité */
+            
+        }
+    }
 }
 
-header img#img_en_tete {
-    height: 100%;
-    flex-shrink: 0;
+.logo {
+    width: 20vw;
+    height: 20vw;
 }
 
-h1{
+#img-menu {
+    max-width: 100%;
+    width:34vw;
+}
+
+.menu {
+    z-index: 9999;
+}
+
+h1, h2, h3, h4, h5 {
     color: #000;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Bobby Jones Soft;
-    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Bobby Jones Soft';
 }
 
-h3{
+h1 {
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 400;
+  
+}
+
+.roca-one {
+    font-family: 'RocaOne-Lt';
+}
+
+.text-center {
     color: #000;
-    font-family: Bobby Jones Soft;
+    text-align: center;
+    font-family: 'RocaOne-Lt';
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -41,15 +84,12 @@ h3{
 }
 
 .width-full {
+    margin-top: 20px;
     width: 100%; 
 }
 
 .height-full {
     height: 100%;
-}
-
-.border {
-    border: 1px solid blue;
 }
 
 #center-content {
@@ -59,75 +99,179 @@ h3{
 }
 
 #description {
-    display: block;
+    display: inline;
     width: 66%;
 }
 
+.close-button {
+  background-color: #84E4A8;
+} 
+
 #img-product {
-    height: 300px;
+    width: 80%;
+    display: flex; /* spécifier un facteur d'agrandissement ou de réduction de la taille d'un élément flexible */
+}
+
+#img-product2 {
+    width: 80%;
+    display: flex;
 }
 
 #choice {
     width: 33%;
+    justify-content: space-between; /* Espace le contenu horizontalement */
+    padding: 100px;
 }
-
 
 #content {
-    /* Aligne sur la mm ligne */
     display: flex;
 }
 
-/* Mobile *////////////////////////////////////////////////////////////////////////////////////
-@media (max-width: 767px) {
-    header {
-    
-    }
-  }
-
-/* desktop *///////////////////////////////////////////////////////////////////////////////////
-@media (min-width: 768px) {
-
-}
-
-header {
+.circle-button.orange {
     background-color: #FF9045;
-    width: 100%;
-    height: 367px;
+}
+
+#select-size {
+    font-size:22px;
+    font-family: 'RocaOne-Lt';
+    background-color: #84E4A8;
+}
+
+#price {
+    font-size:30px;
+    font-family: 'Bobby Jones Soft';
+}
+
+.green-circle p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#img-footer {
     display: flex;
+    /*flex-shrink: 100%; définit le facteur de rétrécissement d'un élément flexible*/
+}
+
+footer {
+    background-color: #FF9045;
+    display: flex;
+    width: 200%; 
+}
+/* fin Commun ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Mobile ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 740px){
+header {
+    width: 100%;
+    background-color: #FF9045;
+    display: flex;
+    justify-content: space-between; /* Pour aligner les éléments horizontalement */
+    align-items: center; /* Pour aligner les éléments verticalement */
+    height: auto; /* Maintient le rapport largeur/hauteur d'origine */
+    flex: 1; /* Chaque section du header prend un tiers de l'espace disponible */
+    text-align: center; 
+}
+
+#img-happy-pug {
+    width: 55vw;
+    height: 40vw;
+    margin-left: 6vw;
 }
 
 #logo {
-    width: 30%;
-    height: auto;
+    width: 30vw;
+    height: 30vw;
+    margin-top: -10vw;
 }
 
 #img-menu{
-    width: 100%;
-    height: auto;
+    width: 30vw;
+    height: 30vw;
+    margin-left: -14vw;
+    margin-top: -8vw;
 }
 
-#img-pdt {
-    width: 430px;
-    height: 350px;
-    flex-shrink: 0;
+.menu {
+    position: fixed;
+    width: 0px;
 }
 
+main {
+    margin-left: 50px;
+    width: 500px;
+    text-align: flex;
+}
+
+#hamburger {
+    /* Pour que la checkbox ne s'affiche pas */
+    display: none;
+}
+
+#hamburger-logo {
+    cursor: pointer;
+    width: 100px;
+    display: block;
+    /* Pour que le menu hamburger s'affiche toujours */
+    text-align: left;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background: #FF9045;
+    overflow: hidden;
+    width: 100vw;
+    transform: translateX(-100vW);
+    font-family: 'Bobby Jones Soft';
+    color: #000;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Bobby Jones Soft';
+    font-size: 16px;
+    font-style: normal;
+}
+
+#hamburger-logo,
+nav {
+    transition: 0.7s;
+}
+
+/* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+#hamburger:checked ~ #hamburger-logo,
+#hamburger:checked ~ nav {
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0.3vw);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 30px;
+}
+
+nav a:hover {
+    background: #84E4A8;
+}
 
 h1{
     color: #000;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Bobby Jones Soft;
-    font-size: 48px;
+    font-family: 'Bobby Jones Soft';
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
+}    
 
 h3{
     color: #000;
-    font-family: Bobby Jones Soft;
-    font-size: 24px;
+    font-family: 'Bobby Jones Soft';
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -135,26 +279,369 @@ h3{
 
 p { 
     background: linear-gradient(to top, rgba(0, 0, 0 0.5), rgb(253, 253, 253)); 
-    /* border: 2px solid black; */
     margin-right: 20px; /* Espacement horizontal entre les <divs> */
     display: inline-block; /* Pour qu'elles soient alignés côte à côte */
     padding: 10px; /* Espace entre le texte et la bordure */
     color: #000;
-    font-family: RocaOne-Lt;
-    font-size: 24px;
+    font-family: 'RocaOne-Lt';
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    }
-
-footer{
-    width: 1290px;
-    height: 299px;
-    flex-shrink: 0;
-    background-color: #FF9045;
-    width: 100%;
-    height: 367px;
-    display: flex;
 }
 
+.green-circle {
+    width: 110px; 
+    height: 110px;
+    background-color: #84E4A8; 
+    border-radius: 50%; /* Pour créer un rond */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Pour centrer le rond par rapport au texte */
+    z-index: -1; 
+    text-align: center;
+    position: relative; /* Assure que le texte est positionné correctement par rapport au conteneur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    margin-right: 100vw;
+}
+
+
+.add-to-basket {
+    background-color: #FF9045; 
+    color: white; 
+    border: none;
+    border-radius: 10px; 
+    padding: 05px 10px; /* Marge intérieure du bouton */
+    cursor: pointer;
+    font-family: 'RocaOne-Lt';
+    font-size: large;
+
+}
+
+.add-to-basket:hover {
+    background-color: #84E4A8; /* Couleur du bouton au survol */
+}
+
+.p-select-size {
+    font-size: 0px;
+}
+
+.quantity-button {
+    width: 40px; 
+    height: 40px;
+    background-color: #FF9045;
+    border-radius: 50%; 
+    color: #ffffff; 
+    font-weight: bold; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin : 5px;
+    display: inline-flex; /* Affiche les boutons "plus" et "moins" en ligne */
+}
+
+#link a {
+    display: inline-block; /* Pour qu'ils soient alignés côte à côte */
+    padding: 3vw; 
+    font-family: 'RocaOne-Lt';
+    font-size: 16px;
+    font-weight: 500; /* Définis l'épaisseur */
+    line-height: 0.5; /* Léger espace entre les liens */
+    color: #000000;
+    text-decoration: none; /* Supprime le soulignement des liens */
+    margin-left: 7vw;
+}
+
+#link a:visited {
+    color: #000000;
+}
+
+#link a:hover {
+    color: #84E4A8; 
+}
+
+#link a:active {
+    color: #000000; 
+}
+
+footer{
+    background-color: #FF9045;
+    display: flex;
+    width: 100%;
+}
+
+.img-footer a {
+    margin-right: 8vw;
+    max-width: 10vw; /* Limite la largeur maximale des images */
+    height: auto; /* Permet à la hauteur de s'ajuster automatiquement pour conserver les proportions */
+}
+}
+/* fin mobile ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* desktop ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width: 741px) {
+    header {
+        background-color: #FF9045;
+        height: 20vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Pour aligner les éléments horizontalement */
+        max-width: 100%; /* Empêche l'image de déborder de la section */
+        text-align: center; /* Centre le contenu horizontalement */
+        align-items: center; /* Centre les éléments verticalement */
+        position: relative;
+    }
+
+    .menu {
+        /* Pour que le menu reste en place quand on scroll */
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+    }
+            
+    main {
+        /* Pour que le texte ne soit pas sous le menu */
+        margin-left: 50px;
+        width: 50px;
+        text-align: flex;
+    }
+
+    #hamburger {
+        /* Pour que la checkbox ne s'affiche pas */
+        display: none;
+    }
+            
+    #hamburger-logo {
+        cursor: pointer;
+        width: 200px;
+        display: block;
+        /* Pour que le menu hamburger s'affiche toujours */
+        text-align: left;
+        padding: 10px;
+    }
     
+    nav {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #FF9045;
+        overflow: hidden;
+        width: 300px;
+        font-family: 'Bobby Jones Soft';
+        color: #000;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size:24px;
+        font-style: normal;
+        transform: translateX(100%);
+    }
+
+    #hamburger-logo,
+        nav {
+        transition: 1.4s;
+    }
+            
+        /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+    #hamburger:checked ~ #hamburger-logo,
+    #hamburger:checked ~ nav {
+        /* Changement de la position pour afficher les menus */
+        transform: translateX(0);
+    }
+            
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+            
+    nav a:hover {
+        background: #84E4A8;
+    }
+                    
+    #logo{
+        width: 16vw;
+        height: 16vw;
+        margin-top: 2vw;
+    }
+
+    #img-menu{
+        width: 13vw;
+        height: 13vw;
+    }
+
+    #img-happy-pug{
+        width: 32vw;
+        height: 20vw;
+        margin-top: 0.3vw;
+    }
+
+    h1{
+        color: #000;
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Bobby Jones Soft';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #img-product {
+        width: 45%;
+    }
+
+    #img-product-yoda{
+        width: 30vw;
+    }
+
+    #img-product-carpet{
+        width: 20vw;
+    }
+
+    #img-product-key{
+        width: 20vw;
+    }
+
+    #container-unique-accessories {
+        margin-left: 1px;
+        background-color: #84E4A8; 
+        width: 89vw;
+        height: 27.5vw;
+    }
+
+    h3 {
+        color: #000;
+        font-family: 'Bobby Jones Soft';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 50px;
+    }
+
+    .p-select-size {
+        margin-top: 250px;
+        font-size: 24px;
+    }
+
+    p { 
+        background: linear-gradient(to top, rgba(0, 0, 0 0.5), rgb(253, 253, 253)); 
+        margin-right: 20px; /* Espacement horizontal entre les <divs> */
+        display: inline-block; /* Pour qu'elles soient alignés côte à côte */
+        padding: 10px; /* Espace entre le texte et la bordure */
+        color: #000;
+        font-family: 'RocaOne-Lt';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .green-circle {
+        width: 150px; 
+        height: 150px;
+        background-color: #84E4A8; 
+        border-radius: 100%; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-to-basket {
+        width: 230px; 
+        height: 60px;
+        background-color: #FF9045; 
+        color: white; 
+        border: none;
+        border-radius: 10px; 
+        padding: 10px 20px; /* Marge intérieure du bouton */
+        cursor: pointer;
+        margin-top: 35px;
+        font-family: 'RocaOne-Lt';
+        font-size: 28px;
+    }
+
+    .add-to-basket:hover {
+        background-color: #84E4A8; 
+    }
+
+    .button-container {
+        align-items: center;
+        justify-content: center; 
+
+    }
+
+    .quantity-button {
+        width: 60px; 
+        height: 60px;
+        background-color: #FF9045;
+        border-radius: 50%; /* Pour créer un cercle */
+        color: #ffffff; 
+        font-weight: bold; 
+        display: flex;
+        align-items: center; /*Permets de centrer le signe le plus et le moins */
+        justify-content: center;/*Permets aussi de centrer le signe plus et le moins */
+        font-size: 40px;
+        cursor: pointer;
+        margin : 12px;
+        display: inline-flex; /* Affiche les boutons "plus" et "moins" en ligne */
+    }
+
+    #link a {
+        display: inline-block; /* Pour qu'ils soient alignés côte à côte */
+        padding: 10px; 
+        font-family: 'RocaOne-Lt';
+        font-size:24px;
+        font-weight: 400; /* Définis l'épaisseur */
+        line-height: 1.65; /* Léger espace entre les liens */
+        color: #000000;
+        text-decoration: none; /* Supprime le soulignement des liens */
+    }
+        
+    #link a:visited {
+        color: #000000;
+    }
+        
+    #link a:hover {
+        color: #84E4A8; 
+    }
+        
+    #link a:active {
+        color: #000000; 
+    }
+
+    footer{
+        background-color: #FF9045;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-footer{
+        display: flex;
+        align-self: flex-end;
+    }
+}
+
+/* fin Desktop ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */

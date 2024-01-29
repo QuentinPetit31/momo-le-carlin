@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pugmania - Login to your account</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+	  <script src="login.js" async></script>
+  </head>
+
+  <body>
+    <header>
+        <!-- TODO -->
+    </header>
+
+    <div class="container">
+      <div class="band">
+        <h2>Login to your account</h2>
+      </div>
+
+      <form>
+          <label for="email"><p>Email :</p></label>
+          <input  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email here"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  size="10"/>
+          
+          <label for="password"><p>Password :</p></label>
+          <input  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter  your password here"
+                  required
+                  minlength="8"
+                  maxlength="100"
+                  size="10"/>
+
+          <button class="button-submit">Login</button>
+      </form>
+      
+      <p id="message"></p>
+    
+      <a href="https://www.google.fr/" class="link-roca">Password forget ? click here</a>
+      <a href="../register/register.php"  class="link-roca2">New here ? Create your account</a>
+    </div>
+ 
+
+    <footer>
+      <img id="pug-langue1" img src="assets/img/pug-langue.png" alt="footer-img">
+      <img id="pug-langue2" src="assets/img/pug-langue-2.png" alt="footer-img">  
+    </footer>   
+  </body>
+</html>
